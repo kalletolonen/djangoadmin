@@ -5,6 +5,8 @@
 
 Created by: [Kalle Tolonen](https://www.linkedin.com/in/kalletolonen/)
 
+Maturity: 1.0 
+
 ### What does it do?
 - The state creates a barebones Django 4.0.4. development environment with Virtualenv
 - Only allows for localhost as a host
@@ -56,10 +58,10 @@ You can create superusers (while environment is activated & you're in the correc
 
 ### More info
 
-https://github.com/kalletolonen/ConfManSystems/blob/main/h7.md
+https://github.com/kalletolonen/ConfManSystems/blob/main/h7.md  
 -Here you can find out how the state was created in detail
 
-https://terokarvinen.com/2022/django-instant-crm-tutorial/
+https://terokarvinen.com/2022/django-instant-crm-tutorial/  
 -A great resource to get a basic app  going
 
 
