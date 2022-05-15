@@ -1,4 +1,4 @@
-## Idempotent Django developlment server with Salt
+## Idempotent Django development server with Salt
 
 ### What does it do?
 - The state creates a barebones Django development environment with Virtualenv
@@ -15,13 +15,15 @@ Things I have chosen to NOT INCLUDE:
 
 ### Requirements
 
-1. A computer running Debian (tested on Debian 11 Bullseye)
+1. A computer/VM running Debian (tested on Debian 11 Bullseye)
 2. Salt-minion & git installed (for local use)
 3. Sudo access
 
 ### How to use it 
 
 Enter these commands
+
+	sudo apt-get update
 
 	sudo apt-get install -y salt-minion git
 	
