@@ -1,7 +1,12 @@
 ## Idempotent Django development server with Salt
 
+![Pic 1. Django-admin ready for users](pics/h7/16.png)  
+*Django-admin console ready for logging in*
+
+Created by: [Kalle Tolonen](https://www.linkedin.com/in/kalletolonen/)
+
 ### What does it do?
-- The state creates a barebones Django development environment with Virtualenv
+- The state creates a barebones Django 4.0.4. development environment with Virtualenv
 - Only allows for localhost as a host
 - User can input 3 parameters in init.sls to customize the user, project and app
 - You'll have admin console ready
@@ -46,7 +51,7 @@ Enter these commands
 
 	./manage.py runserver
 
-After these you should have a Django server running in localhost. You can test this with your browser by navigating to:
+After these you should have a Django development server running in localhost. You can test this with your browser by navigating to:
 
 	localhost:8000
 
@@ -54,7 +59,14 @@ Admin console is available at:
 
 	localhost:8000/admin
 
-A good place to start would be here: https://terokarvinen.com/2022/django-instant-crm-tutorial/?fromSearch=django
+You can create superusers (while environment is activated & you're in the correct folder) with:
 
-On top of this state you need to:
-- Create a superuser (see article above)
+	./manage.py createsuperuser
+
+### More info
+
+https://github.com/kalletolonen/ConfManSystems/blob/main/h7.md
+-Here you can find out how the state was created in detail
+
+https://terokarvinen.com/2022/django-instant-crm-tutorial/
+-A great resource to get a basic app  going
