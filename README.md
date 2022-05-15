@@ -23,32 +23,23 @@ Things I have chosen to NOT INCLUDE:
 1. A computer/VM running Debian (tested on Debian 11 Bullseye)
 2. Salt-minion & git installed (for local use)
 3. Sudo access
+4. You should have a user ready for your project
 
 ### How to use it 
 
 Enter these commands
 
-	sudo apt-get update
-
-	sudo apt-get install -y salt-minion git
-	
- 	sudo mkdir /srv/salt/
-
- 	cd /srv/salt
- 	
-	sudo git clone https://github.com/kalletolonen/djangoadmin.git
+	sudo bash start
 
 	#edit the 3 variables to your spec
 	sudoedit /srv/salt/djangoadmin/init.sls
 
 	sudo salt-call --local state.apply djangoadmin
-
-	cd /yourusershomedir/
-
-	source env/bin/activate
-
+	
+	source /yourusershomedir/env/bin/activate
+	
 	cd /yourusershomedir/yourproject/
-
+	
 	./manage.py runserver
 
 After these you should have a Django development server running in localhost. You can test this with your browser by navigating to:
@@ -70,3 +61,10 @@ https://github.com/kalletolonen/ConfManSystems/blob/main/h7.md
 
 https://terokarvinen.com/2022/django-instant-crm-tutorial/
 -A great resource to get a basic app  going
+
+
+### Things to improve
+
+- Make the syntax cleaner
+- Figure out a way to start the dev server with salt *and* get feedback (ie. like starting a web daemon.)
+
