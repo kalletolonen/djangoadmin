@@ -15,6 +15,11 @@ source /home/{{ name }}/env/bin/activate && django-admin startproject {{ project
     - unless: test -d /home/{{ name }}/baseproject
     - cwd: /home/{{ name }}/
 
+source /home/{{ name }}/env/bin/activate && ./manage.py migrate && ./manage.py makemigrations:
+  cmd.run:
+    - unless: source /home/{{ name }}/env/bin/activate && ./manage.py migrate | grep "No migrations to apply"
+    - cwd: /home/{{ name }}/{{ project }}/
+
 /home/{{ name }}/{{ project }}/{{ project }}/settings.py:
   file.blockreplace:
     - marker_start: "    'django.contrib.staticfiles',"
@@ -24,11 +29,6 @@ source /home/{{ name }}/env/bin/activate && django-admin startproject {{ project
     - marker_end: "# Application definition"
     - content: "ALLOWED_HOSTS = ['localhost']"
     - append_if_not_found: True
-
-source /home/{{ name }}/env/bin/activate && ./manage.py migrate && ./manage.py makemigrations:
-  cmd.run:
-    - unless: source /home/{{ name }}/env/bin/activate && ./manage.py migrate | grep "No migrations to apply"
-    - cwd: /home/{{ name }}/{{ project }}/
 
 /home/{{ name }}/{{ project }}:
   file.directory:
