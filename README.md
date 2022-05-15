@@ -23,9 +23,8 @@ Things I have chosen to NOT INCLUDE:
 ### Requirements
 
 1. A computer/VM running Debian (tested on Debian 11 Bullseye)
-2. Salt-minion & git installed (for local use)
-3. Sudo access
-4. You should have a user ready for your project
+2. Sudo access
+3. You should have a user ready for your project
 
 ### How to use it 
 
