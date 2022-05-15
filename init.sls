@@ -12,7 +12,7 @@ virtualenv:
 
 source /home/{{ name }}/env/bin/activate && django-admin startproject {{ project }}:
   cmd.run:
-    - unless: test -d /home/{{ name }}/baseproject
+    - unless: test -d /home/{{ name }}/{{ project }}
     - cwd: /home/{{ name }}/
 
 source /home/{{ name }}/env/bin/activate && ./manage.py migrate && ./manage.py makemigrations:
