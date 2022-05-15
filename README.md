@@ -1,6 +1,6 @@
 ## Idempotent Django development server with Salt
 
-![Pic 1. Django-admin ready for users](pics/h7/16.png)  
+![Pic 1. Django-admin ready for users](https://github.com/kalletolonen/ConfManSystems/raw/main/pics/h7/16.png)  
 *Django-admin console ready for logging in*
 
 Created by: [Kalle Tolonen](https://www.linkedin.com/in/kalletolonen/)
