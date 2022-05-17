@@ -30,7 +30,11 @@ Things I have chosen to NOT INCLUDE:
 
 Enter these commands
 
-	sudo bash start
+	sudo apt-get update && sudo apt-get install -y salt-minion git
+
+	sudo mkdir /srv/salt/ && cd /srv/salt
+	
+	sudo git clone https://github.com/kalletolonen/djangoadmin.git
 
 	#edit the 3 variables to your spec
 	sudoedit /srv/salt/djangoadmin/init.sls
